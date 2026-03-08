@@ -1,4 +1,4 @@
-import random
+import random, json
 
 from faker import Faker
 
@@ -14,6 +14,7 @@ for i in range(15):
         "telefono": fake.phone_number()
     }
     usuarios.append(usuario)
+    print(json.dumps(usuario, indent=4))
 
 
 print(f"O usuario chamado {random.choice(usuarios)['nome']} foi o afortunado!")
